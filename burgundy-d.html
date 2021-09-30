@@ -2,11 +2,72 @@
 <html>
 <head>
 <title>Page Title</title>
+<link href="./css/dice.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="area">
+<div>
 <canvas id="mainCanvas" style="position:absolute; left:0px; top:0px;"\>
 </div>
+<div style="position:block; float: right; padding: 5pt;">
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <div id="dice__cube" class="show-front dice__cube">
+    <div class="dice__side dice__side--front-time"></div>
+		<div class="dice__side dice__side--back-time"></div>
+		<div class="dice__side dice__side--right-time"></div>
+		<div class="dice__side dice__side--left-time"></div>
+		<div class="dice__side dice__side--top-time"></div>
+		<div class="dice__side dice__side--bottom-time"></div>
+  </div>
+</div>
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <div id="dice__cube" class="show-front dice__cube">
+    <div class="dice__side dice__side--front"></div>
+		<div class="dice__side dice__side--back"></div>
+		<div class="dice__side dice__side--right"></div>
+		<div class="dice__side dice__side--left"></div>
+		<div class="dice__side dice__side--top"></div>
+		<div class="dice__side dice__side--bottom"></div>
+  </div>
+</div>
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <div id="dice__cube" class="show-front dice__cube">
+    <div class="dice__side dice__side--front"></div>
+		<div class="dice__side dice__side--back"></div>
+		<div class="dice__side dice__side--right"></div>
+		<div class="dice__side dice__side--left"></div>
+		<div class="dice__side dice__side--top"></div>
+		<div class="dice__side dice__side--bottom"></div>
+  </div>
+</div>
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <div id="dice__cube" class="show-front dice__cube">
+    <div class="dice__side dice__side--front-color"></div>
+		<div class="dice__side dice__side--back-color"></div>
+		<div class="dice__side dice__side--right-color"></div>
+		<div class="dice__side dice__side--left-color"></div>
+		<div class="dice__side dice__side--top-color"></div>
+		<div class="dice__side dice__side--bottom-color"></div>
+  </div>
+</div>
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <div id="dice__cube" class="show-front dice__cube">
+    <div class="dice__side dice__side--front-color"></div>
+		<div class="dice__side dice__side--back-color"></div>
+		<div class="dice__side dice__side--right-color"></div>
+		<div class="dice__side dice__side--left-color"></div>
+		<div class="dice__side dice__side--top-color"></div>
+		<div class="dice__side dice__side--bottom-color"></div>
+  </div>
+</div>
+<div class="dice__scene" style="position: block; padding: 5pt;">
+  <audio preload="auto" id="dice__audio">
+  	<source src="./assets/sounds/dice-sound.mp3"></source>
+  </audio>
+  <!-- /Dice -->
+  <button class="demo__button" id="dice__btn">Roll the dice</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="./js/dice.js"></script>
 <script>
 (function() {
   var
