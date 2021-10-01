@@ -22,15 +22,16 @@ $(document).ready(function() {
   function keep() {
     if (turn > 0) {
       var t, c, e = $(".dice__scene #dice__cube"),
-        htmlCanvas = document.getElementById('mainCanvas'),
-        context = htmlCanvas.getContext('2d'),
+        sideCanvas = document.getElementById('sideCanvas'),
+        sideContext = sideCanvas.getContext('2d'),
         img = new Image();
       for (i = 0; i < e.length; i++) {
         t = e.eq(i).attr("class").split("-")[1];
         c = t == "front" ? 0 : t == "back" ? 1 : t == "right" ? 2 : t == "left" ? 3 : t == "top" ? 4 : 5;
         img.src = e.eq(i).children().eq(c).css('background-image').replace(/^url\((['"]?)(.*?)\1\).*$/i, "$2");
-        context.fillText(turn, htmlCanvas.width - $('#dice').width() + 15, 85 + 30 * turn);
-        context.drawImage(img, htmlCanvas.width - $('#dice').width() + 30 + i * 30, 70 + 30 * turn, 28, 28);
+        sideContext.font = "30px Arial";
+        sideContext.fillText(turn, 15, 60 * turn - 10);
+        sideContext.drawImage(img, 60 + i * 60, 60 * turn - 50, 56, 56);
       }
     }
     turn += 1
